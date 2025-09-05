@@ -1,0 +1,234 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/home/Desktop/salaryy/contracts/AdminDashboard.sol": {
+      "lastModificationDate": 1757012703752,
+      "contentHash": "132bab406980f8dc3344a439045970b1",
+      "sourceName": "contracts/AdminDashboard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SalaryStreamingFactory.sol",
+        "./SalaryContract.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "AdminDashboard"
+      ]
+    },
+    "/Users/home/Desktop/salaryy/contracts/SalaryStreamingFactory.sol": {
+      "lastModificationDate": 1757003852119,
+      "contentHash": "1a10b7f3e584e65892373f28288497eb",
+      "sourceName": "contracts/SalaryStreamingFactory.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SalaryContract.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "SalaryStreamingFactory"
+      ]
+    },
+    "/Users/home/Desktop/salaryy/contracts/SalaryContract.sol": {
+      "lastModificationDate": 1757003868900,
+      "contentHash": "743f6fb5aed512724339a64481066c73",
+      "sourceName": "contracts/SalaryContract.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "SalaryContract"
+      ]
+    },
+    "/Users/home/Desktop/salaryy/contracts/EmployerDashboard.sol": {
+      "lastModificationDate": 1757012097874,
+      "contentHash": "7d4b6b5242ca776de077fe2adfec9944",
+      "sourceName": "contracts/EmployerDashboard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SalaryStreamingFactory.sol",
+        "./SalaryContract.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "EmployerDashboard"
+      ]
+    },
+    "/Users/home/Desktop/salaryy/contracts/EmployeeDashboard.sol": {
+      "lastModificationDate": 1757011860210,
+      "contentHash": "be0b83dfebc133f92d65c25b9432b6f8",
+      "sourceName": "contracts/EmployeeDashboard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SalaryContract.sol",
+        "./SalaryStreamingFactory.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "EmployeeDashboard"
+      ]
+    },
+    "/Users/home/Desktop/salaryy/contracts/AttendanceManager.sol": {
+      "lastModificationDate": 1757012965572,
+      "contentHash": "bda886aaef8804f012dd0f66083e6c91",
+      "sourceName": "contracts/AttendanceManager.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SalaryContract.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "AttendanceManager"
+      ]
+    }
+  }
+}
