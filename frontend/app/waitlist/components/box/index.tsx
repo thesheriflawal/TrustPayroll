@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import type { PropsWithChildren } from "react"
+import Image from "next/image"
 import { ThemeSwitcher } from "../switch-theme"
 
 export function WaitlistWrapper({ children }: PropsWithChildren) {
@@ -14,9 +15,9 @@ export function WaitlistWrapper({ children }: PropsWithChildren) {
       )}
     >
       <div className="flex flex-col items-center gap-4 flex-1 text-center w-full p-8 pb-4">
-        <div className="flex justify-center w-32 h-16 items-center mx-auto bg-zinc-100 dark:bg-zinc-800 rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-700">
-          <span className="text-xs text-zinc-600 dark:text-zinc-300 font-medium">Your Logo</span>
-        </div>
+        
+          <Image src="/trustpayroll.png" alt="TrustPayroll" width={240} height={40} priority />
+        
         <div className="flex flex-col gap-10">{children}</div>
       </div>
       <footer className="flex justify-between items-center w-full self-stretch px-8 py-3 text-sm bg-zinc-100 dark:bg-zinc-800">
