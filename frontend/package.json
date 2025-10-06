@@ -9,6 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@paper-design/shaders-react": "latest",
+    "@supabase/ssr": "^0.5.0",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
@@ -55,6 +57,7 @@
     "react": "^19",
     "react-day-picker": "9.8.0",
     "react-dom": "^19",
+    "resend": "^4.0.0",
     "react-hook-form": "^7.60.0",
     "react-resizable-panels": "^2.1.7",
     "recharts": "2.15.4",
