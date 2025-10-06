@@ -1,6 +1,6 @@
-import { submitWaitlistEmail } from "@/lib/actions"
-import { InputForm } from "@/components/waitlist-form"
-import { WaitlistWrapper } from "@/components/box"
+import { submitWaitlistEmail } from "./lib/actions"
+import { InputForm } from "./components/waitlist-form"
+import { WaitlistWrapper } from "./components/box"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Be the first to experience the future of payroll management",
 }
 
-export default function Home() {
+export default function WaitlistPage() {
   return (
     <WaitlistWrapper>
       {/* Heading */}
@@ -36,3 +36,5 @@ export default function Home() {
     </WaitlistWrapper>
   )
 }
+
+

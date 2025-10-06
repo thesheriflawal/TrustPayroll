@@ -1,7 +1,7 @@
 "use server"
 
-import { createClient } from "@/lib/supabase/server"
-import { resend } from "@/lib/resend"
+import { createClient } from "./supabase/server"
+import { resend } from "./resend"
 
 export async function submitWaitlistEmail(formData: FormData) {
   const email = formData.get("email") as string
