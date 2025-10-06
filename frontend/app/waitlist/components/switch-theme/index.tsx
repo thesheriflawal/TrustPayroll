@@ -37,7 +37,7 @@ export function ThemeSwitcher({ className }: { className?: string }) {
         <React.Fragment key={option}>
           <button
             className={clsx(
-              'text-xs text-slate-10 flex items-center justify-center gap-1 max-w-max',
+              'text-xs text-slate-10 flex items-center justify-center gap-1 max-w-max cursor-pointer',
               theme === option && '!text-slate-12 font-medium'
             )}
             style={{

@@ -100,10 +100,18 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           type="submit"
           disabled={inputDisabled}
           className={clsx(
-            "absolute h-8 px-3.5 bg-gray-12 text-gray-1 text-sm top-1/2 transform -translate-y-1/2 right-1.5 rounded-full font-medium flex gap-1 items-center",
-            "disabled:cursor-not-allowed",
+            "absolute h-8 px-3.5 text-sm top-1/2 transform -translate-y-1/2 right-1.5 rounded-full font-medium flex gap-1 items-center",
+            "cursor-pointer disabled:cursor-not-allowed transition-colors",
+            // Light mode default: primary navy background
+            "bg-[#04203E] text-white",
+            // Dark mode default: white background, navy text
+            "dark:bg-white dark:text-[#04203E]",
+            // Hover accents
+            "hover:bg-[#27A74A] hover:text-white",
+            "dark:hover:bg-[#27A74A] dark:hover:text-white",
             {
-              "bg-gray-12 text-gray-2": state === "loading",
+              // Loading subtle state
+              "opacity-80": state === "loading",
             },
             inputDisabled && "cursor-not-allowed bg",
           )}

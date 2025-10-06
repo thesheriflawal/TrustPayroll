@@ -2,113 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --header-height: 64px;
-
-  text-rendering: geometricprecision;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-:root {
-  /* TrustPayroll brand colors - Light mode */
-  --slate-1: 252 252 253;
-  --slate-2: 249 249 251;
-  --slate-3: 240 240 243;
-  --slate-4: 232 232 236;
-  --slate-5: 224 225 230;
-  --slate-6: 217 217 224;
-  --slate-7: 205 206 214;
-  --slate-8: 185 187 198;
-  --slate-9: 139 141 152;
-  --slate-10: 96 100 108;
-  --slate-11: 76 80 88;
-  --slate-12: 4 32 62; /* Primary brand color #04203E */
-
-  --gray-1: 252 252 252;
-  --gray-2: 249 249 249;
-  --gray-3: 240 240 240;
-  --gray-4: 232 232 232;
-  --gray-5: 224 224 224;
-  --gray-6: 217 217 217;
-  --gray-7: 206 206 206;
-  --gray-8: 187 187 187;
-  --gray-9: 141 141 141;
-  --gray-10: 131 131 131;
-  --gray-11: 100 100 100;
-  --gray-12: 4 32 62; /* Primary brand color */
-
-  /* Brand accent color */
-  --accent: 39 167 74; /* Secondary brand color #27A74A */
-}
-
-:root:is(html.dark) {
-  /* TrustPayroll brand colors - Dark mode */
-  --slate-1: 4 32 62; /* Primary brand color as background */
-  --slate-2: 8 40 72;
-  --slate-3: 12 48 82;
-  --slate-4: 16 56 92;
-  --slate-5: 20 64 102;
-  --slate-6: 28 76 116;
-  --slate-7: 40 92 136;
-  --slate-8: 60 116 164;
-  --slate-9: 80 136 184;
-  --slate-10: 120 160 200;
-  --slate-11: 176 200 220;
-  --slate-12: 237 238 240;
-
-  --gray-1: 4 32 62;
-  --gray-2: 8 40 72;
-  --gray-3: 16 48 82;
-  --gray-4: 24 56 92;
-  --gray-5: 32 64 102;
-  --gray-6: 44 76 116;
-  --gray-7: 60 92 136;
-  --gray-8: 80 116 164;
-  --gray-9: 100 136 184;
-  --gray-10: 140 170 200;
-  --gray-11: 180 200 220;
-  --gray-12: 238 238 238;
-
-  --accent: 39 167 74;
-}
-
-:root {
-  color: rgb(var(--gray-1));
-  background-color: rgb(var(--slate-12));
-}
-
-:root:is(html.light) {
-  background-color: rgb(var(--slate-1));
-}
-
-html,
 body {
-  background-color: rgb(var(--slate-12));
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body:has(html:not(:last-child)) {
-  padding-bottom: 6rem;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
-*:focus-visible {
-  outline-color: rgb(var(--slate-12));
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
-/* Updated gradient colors to TrustPayroll brand */
-#gradient-canvas {
-  width: 100%;
-  height: 100%;
-  --gradient-color-1: #04203e;
-  --gradient-color-2: #27a74a;
-  --gradient-color-3: #0a3d5c;
-  --gradient-color-4: #1f8a3d;
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
 }
 
 
