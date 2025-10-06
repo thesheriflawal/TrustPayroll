@@ -1,6 +1,7 @@
 "use client"
 import clsx from "clsx"
 import type React from "react"
+import { useTheme } from "next-themes"
 
 import { useRef, useState, useEffect } from "react"
 
@@ -23,6 +24,7 @@ const STATES: Record<State, State> = {
 }
 
 export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
+  const { resolvedTheme } = useTheme()
   const [state, setState] = useState<State>(STATES.idle)
   const [error, setError] = useState<string>()
   const [value, setValue] = useState("")
@@ -102,10 +104,10 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           className={clsx(
             "absolute h-8 px-3.5 text-sm top-1/2 transform -translate-y-1/2 right-1.5 rounded-full font-medium flex gap-1 items-center",
             "cursor-pointer disabled:cursor-not-allowed transition-colors",
-            // Light mode default: primary navy background
-            "bg-[#04203E] text-white",
-            // Dark mode default: white background, navy text
-            "dark:bg-white dark:text-[#04203E]",
+            // Default: white background, navy text
+            resolvedTheme !== "light" && "bg-white text-[#04203E]",
+            // Light mode: navy background, white text
+            resolvedTheme === "light" && "bg-[#04203E] text-white",
             // Hover accents
             "hover:bg-[#27A74A] hover:text-white",
             "dark:hover:bg-[#27A74A] dark:hover:text-white",
