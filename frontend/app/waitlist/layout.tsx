@@ -28,7 +28,7 @@ export default function WaitlistLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-slate-1 text-slate-12`}>
-        <Providers defaultTheme="light">
+        <Providers defaultTheme="light" forcedTheme="light">
           <MeshGradientComponent
             colors={["#04203E", "#27A74A", "#0a3d5c", "#1f8a3d"]}
             speed={0.5}

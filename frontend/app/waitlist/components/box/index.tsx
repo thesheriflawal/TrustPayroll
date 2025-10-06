@@ -20,8 +20,8 @@ export function WaitlistWrapper({ children }: PropsWithChildren) {
         
         <div className="flex flex-col gap-10">{children}</div>
       </div>
-      <footer className="flex justify-between items-center w-full self-stretch px-8 py-3 text-sm bg-zinc-100 dark:bg-zinc-800">
-        <p className="text-xs text-zinc-600 dark:text-zinc-300">© 2025 TrustPayroll. All rights reserved.</p>
+      <footer className="flex justify-between items-center w-full self-stretch px-8 py-3 text-xs bg-zinc-100 dark:bg-zinc-800">
+        <p className="text-3xs text-zinc-600  dark:text-zinc-300">© 2025 TrustPayroll. All rights reserved.</p>
         <ThemeSwitcher />
       </footer>
     </div>
