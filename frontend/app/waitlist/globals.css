@@ -91,6 +91,16 @@ body {
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+    overscroll-behavior: none;
+    touch-action: manipulation;
+  }
+}
+
+/* Prevent scroll bounce on mobile for the waitlist route */
+@media (max-width: 640px) {
+  html, body {
+    height: 100dvh;
+    overflow: hidden;
   }
 }
 

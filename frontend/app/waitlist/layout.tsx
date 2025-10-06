@@ -34,7 +34,7 @@ export default function WaitlistLayout({
             speed={0.5}
             style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%" }}
           />
-          <div className="relative z-[1] min-h-screen w-full flex items-center justify-center px-5">
+          <div className="relative z-[1] min-h-[100dvh] h-[100dvh] w-full flex items-center justify-center px-5 overflow-hidden">
             <main className="w-full max-w-screen-sm flex justify-center">{children}</main>
           </div>
         </Providers>
