@@ -2,7 +2,7 @@ import type React from "react"
 import type { Viewport, Metadata } from "next"
 import { Montserrat } from "next/font/google"
 import { Providers } from "./context"
-import { Header } from "./components/header"
+// import { Header } from "./components/header"
 import { MeshGradientComponent } from "./components/mesh-gradient"
 import "./globals.css"
 
@@ -34,11 +34,8 @@ export default function WaitlistLayout({
             speed={0.5}
             style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%" }}
           />
-          <div className="max-w-screen-sm mx-auto w-full relative z-[1] flex flex-col min-h-screen">
-            <div className="px-5 gap-8 flex flex-col flex-1 py-[12vh]">
-              <Header />
-              <main className="flex justify-center">{children}</main>
-            </div>
+          <div className="relative z-[1] min-h-screen w-full flex items-center justify-center px-5">
+            <main className="w-full max-w-screen-sm flex justify-center">{children}</main>
           </div>
         </Providers>
       </body>
