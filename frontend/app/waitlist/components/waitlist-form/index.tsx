@@ -22,6 +22,7 @@ const STATES: Record<State, State> = {
   error: "error",
 }
 
+
 export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
   const [state, setState] = useState<State>(STATES.idle)
   const [error, setError] = useState<string>()
