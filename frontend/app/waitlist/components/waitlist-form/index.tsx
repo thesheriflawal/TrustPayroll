@@ -102,12 +102,10 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           className={clsx(
             "absolute h-8 px-3.5 text-sm top-1/2 transform -translate-y-1/2 right-1.5 rounded-full font-medium flex gap-1 items-center",
             "cursor-pointer disabled:cursor-not-allowed transition-colors",
-            // Default: black background, white text
+            // Light mode: black background, white text
             "bg-black text-white",
-            // Light mode: navy background, white text
-            "light:bg-[#04203E] light:text-white",
-            // Dark mode: white background, navy text
-            "dark:bg-white dark:text-[#04203E]",
+            // Dark mode: white background, black text
+            "dark:bg-white dark:text-black",
             // Hover accents
             "hover:bg-[#27A74A] hover:text-white",
             "dark:hover:bg-[#27A74A] dark:hover:text-white",
