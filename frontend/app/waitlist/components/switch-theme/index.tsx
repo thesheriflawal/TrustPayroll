@@ -37,8 +37,8 @@ export function ThemeSwitcher({ className }: { className?: string }) {
         <React.Fragment key={option}>
           <button
             className={clsx(
-              'text-xs text-slate-10 flex items-center justify-center gap-1 max-w-max cursor-pointer',
-              theme === option && '!text-slate-12 font-medium'
+              'text-xs text-zinc-600 dark:text-zinc-300 flex items-center justify-center gap-1 max-w-max cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100',
+              theme === option && '!text-zinc-900 dark:!text-zinc-100 font-medium'
             )}
             style={{
               fontFeatureSettings: '"ss01"',
@@ -49,7 +49,7 @@ export function ThemeSwitcher({ className }: { className?: string }) {
             <span className="first-letter:uppercase">{option}</span>
           </button>
           {i < options.length - 1 && (
-            <span className="text-xs text-slate-8">/</span>
+            <span className="text-xs text-zinc-400 dark:text-zinc-500">/</span>
           )}
         </React.Fragment>
       ))}
