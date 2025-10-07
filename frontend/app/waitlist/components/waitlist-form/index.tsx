@@ -49,7 +49,7 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           toast.success("Congratulations! You're on the waitlist. We'll keep you updated!")
           formEl.reset()
           setValue("")
-          setTimeout(() => setState(STATES.idle), 3000)
+          setTimeout(() => setState(STATES.idle), 6000)
         } else {
           if (data.error === "This email is already on the waitlist") {
             toast("Thanks for your enthusiasm! Your email has been recorded. We'll reach out for promotions or when we're ready to roll out.")
@@ -60,7 +60,7 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
             errorTimeout.current = setTimeout(() => {
               setError(undefined)
               setState(STATES.idle)
-            }, 3000)
+            }, 6000)
           }
         }
       } catch (error) {
@@ -70,7 +70,7 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
         errorTimeout.current = setTimeout(() => {
           setError(undefined)
           setState(STATES.idle)
-        }, 3000)
+        }, 6000)
       }
     }
   }
