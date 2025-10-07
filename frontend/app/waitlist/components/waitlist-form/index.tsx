@@ -81,10 +81,11 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
     <form className="flex flex-col gap-2 w-full relative" onSubmit={handleSubmit}>
       <div className="flex items-center justify-between gap-3 relative">
         <input
+          type="email"
           {...props}
           value={value}
           className={clsx(
-            "flex-1 text-sm pl-4 pr-28 py-2 h-11 bg-gray-11/5 cursor-text rounded-full text-gray-12 placeholder:text-gray-9 border border-gray-11/10",
+            "flex-1 text-sm pl-4 pr-28 py-2 h-11 bg-gray-11/5 cursor-text rounded-full text-gray-12 placeholder:text-gray-9 border border-gray-11/10 focus:outline-none",
           )}
           disabled={inputDisabled}
           onChange={(e) => setValue(e.target.value)}

@@ -1,0 +1,1 @@
+- [x] Modify the input element in frontend/app/waitlist/components/waitlist-form/index.tsx to add type="email" and include "focus:outline-none" in the className to remove mobile focus border.
