@@ -2,7 +2,8 @@
 import clsx from "clsx"
 import type React from "react"
 
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState } from "react"
+import { toast } from "sonner"
 
 type InputForm = {
   formAction?: (data: FormData) => Promise<{ success: true } | { success: false; error: string }>
@@ -29,17 +30,6 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
   const [value, setValue] = useState("")
   const errorTimeout = useRef<NodeJS.Timeout | null>(null)
 
-  // Auto-reset success state back to idle after 2 seconds
-  useEffect(() => {
-    if (state === STATES.success) {
-      const resetTimeout = setTimeout(() => {
-        setState(STATES.idle)
-      }, 2000)
-
-      return () => clearTimeout(resetTimeout)
-    }
-  }, [state])
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const formEl = e.currentTarget
@@ -56,16 +46,22 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
 
         if (data.success) {
           setState(STATES.success)
-
+          toast.success("Congratulations! You're on the waitlist. We'll keep you updated!")
           formEl.reset()
           setValue("")
+          setTimeout(() => setState(STATES.idle), 3000)
         } else {
-          setState(STATES.error)
-          setError(data.error)
-          errorTimeout.current = setTimeout(() => {
-            setError(undefined)
+          if (data.error === "This email is already on the waitlist") {
+            toast("Thanks for your enthusiasm! Your email has been recorded. We'll reach out for promotions or when we're ready to roll out.")
             setState(STATES.idle)
-          }, 3000)
+          } else {
+            setState(STATES.error)
+            setError(data.error)
+            errorTimeout.current = setTimeout(() => {
+              setError(undefined)
+              setState(STATES.idle)
+            }, 3000)
+          }
         }
       } catch (error) {
         setState(STATES.error)

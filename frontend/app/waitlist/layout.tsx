@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google"
 import { Providers } from "./context"
 // import { Header } from "./components/header"
 import { MeshGradientComponent } from "./components/mesh-gradient"
+import { Toaster } from "./components/ui/sonner"
 import "./globals.css"
 
 const montserrat = Montserrat({
@@ -37,6 +38,7 @@ export default function WaitlistLayout({
           <div className="relative z-[1] min-h-[100dvh] h-[100dvh] w-full flex items-center justify-center px-5 overflow-hidden">
             <main className="w-full max-w-screen-sm flex justify-center">{children}</main>
           </div>
+          <Toaster position="top-right" duration={3000} />
         </Providers>
       </body>
     </html>
