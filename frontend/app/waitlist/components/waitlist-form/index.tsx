@@ -53,7 +53,12 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
         } else {
           if (data.error === "This email is already on the waitlist") {
             toast("Thanks for your enthusiasm! Your email has been recorded. We'll reach out for promotions or when we're ready to roll out.")
-            setState(STATES.idle)
+            setState(STATES.error)
+            setError("You are already on the waitlist")
+            errorTimeout.current = setTimeout(() => {
+              setError(undefined)
+              setState(STATES.idle)
+            }, 6000)
           } else {
             setState(STATES.error)
             setError(data.error)
