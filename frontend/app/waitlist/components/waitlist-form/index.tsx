@@ -128,6 +128,7 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
       </div>
       <div className="w-full h-2" />
       {error && <p className="absolute text-xs text-[#ff0000] top-full -translate-y-1/2 px-2">{error}</p>}
+      {state === 'success' && <p className="absolute text-xs text-green-600 top-full -translate-y-1/2 px-2">Waitlist joined successfully</p>}
     </form>
   )
 }
