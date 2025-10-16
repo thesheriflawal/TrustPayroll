@@ -3,6 +3,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { submitWaitlistEmail } from "./lib/actions"
 import { InputForm } from "./components/waitlist-form"
 import { WaitlistWrapper } from "./components/box"
+import { ScrollToTopOnReload } from "./components/scroll-to-top"
 
 export const metadata: Metadata = {
   title: "TrustPayroll – Salary Streaming for Africa | Join the Waitlist",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function WaitlistPage() {
   return (
     <>
+      <ScrollToTopOnReload />
       {/* Top nav as its own fixed section */}
       <section aria-label="Primary navigation" className="fixed top-0 left-0 right-0 z-[2] pointer-events-none">
         <nav className="mx-auto max-w-6xl px-4 flex justify-center mt-4 pointer-events-auto">
