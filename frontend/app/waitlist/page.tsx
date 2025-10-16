@@ -57,7 +57,7 @@ export default function WaitlistPage() {
           </h1>
           <p className="text-white/80 text-base md:text-lg max-w-3xl">
             TrustPayroll is a dual-rail salary streaming platform for African SMEs and the freelance economy. Pay via bank or
-            wallet in real time—supporting NGN and USDT from day one.
+            wallet in real time. Supports NGN and USDT payments.
           </p>
           <div className="text-white/70 text-sm">
             FIAT and Web3 rails • Instant payouts • Attendance-aware streaming
@@ -88,7 +88,7 @@ export default function WaitlistPage() {
           <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition hover:bg-white/15">
             <h3 className="text-xl font-semibold">For Employers</h3>
             <p className="text-white/80 mt-2">
-              Create your organization, add staff or freelancers, set salaries and work cycles, and start streaming payments. Fund once in NGN or USDT—TrustPayroll handles the rest.
+              Create your organization, add staff or freelancers, set salaries and work cycles, and start streaming payments. Fund once in NGN or USDT, TrustPayroll handles the rest.
             </p>
             <ul className="mt-4 grid gap-2 text-white/80 text-sm">
               <li>• Add individually or via CSV</li>
@@ -100,7 +100,7 @@ export default function WaitlistPage() {
           <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition hover:bg-white/15">
             <h3 className="text-xl font-semibold">For Employees & Contractors</h3>
             <p className="text-white/80 mt-2">
-              Watch earnings accrue live based on attendance and work done. Withdraw anytime—straight to bank (NGN) or on-chain (USDT).
+              Watch earnings accrue live based on attendance and work done. Withdraw anytime, straight to bank (NGN) or on-chain (USDT).
             </p>
             <ul className="mt-4 grid gap-2 text-white/80 text-sm">
               <li>• Live balance: earned-to-date and withdrawable</li>
