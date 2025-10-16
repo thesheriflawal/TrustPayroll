@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -91,17 +89,24 @@ body {
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    overscroll-behavior: none;
+    overscroll-behavior-y: contain;
     touch-action: manipulation;
   }
 }
 
-/* Prevent scroll bounce on mobile for the waitlist route */
+/* Mobile scrolling: allow vertical scroll and prevent horizontal overflow */
 @media (max-width: 640px) {
   html, body {
-    height: 100dvh;
-    overflow: hidden;
+    min-height: 100dvh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
+}
+
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
 }
 
 

@@ -3,7 +3,9 @@
 import { createClient } from "./supabase/server"
 import { resend } from "./resend"
 
-export async function submitWaitlistEmail(formData: FormData) {
+export type WaitlistResponse = { success: true } | { success: false; error: string }
+
+export async function submitWaitlistEmail(formData: FormData): Promise<WaitlistResponse> {
   const email = formData.get("email") as string
 
   if (!email || !email.includes("@")) {

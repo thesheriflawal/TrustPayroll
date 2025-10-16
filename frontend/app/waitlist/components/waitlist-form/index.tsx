@@ -12,7 +12,7 @@ type InputForm = {
     idle: string
     loading: string
   }
-} & React.HTMLAttributes<HTMLInputElement>
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, "formAction">
 
 type State = "idle" | "loading" | "success" | "error"
 

@@ -33,10 +33,16 @@ export default function WaitlistLayout({
           <MeshGradientComponent
             colors={["#04203E", "#27A74A", "#0a3d5c", "#1f8a3d"]}
             speed={0.5}
-            style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%" }}
+            style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%", pointerEvents: "none" }}
           />
-          <div className="relative z-[1] min-h-[100dvh] w-full px-5 py-10">
-            <main className="w-full max-w-6xl mx-auto flex flex-col gap-24">{children}</main>
+          {/* 50% dark overlay above gradient, below content */}
+          <div
+            aria-hidden
+            className="fixed inset-0 bg-black/60"
+            style={{ zIndex: 0, pointerEvents: "none" }}
+          />
+          <div className="relative z-[1] min-h-[100dvh] w-full px-5 py-6">
+            <main className="w-full max-w-6xl mx-auto flex flex-col gap-12">{children}</main>
           </div>
           <Toaster position="top-right" duration={3000} />
         </Providers>
