@@ -35,8 +35,8 @@ export default function WaitlistLayout({
             speed={0.5}
             style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%" }}
           />
-          <div className="relative z-[1] min-h-[100dvh] h-[100dvh] w-full flex items-center justify-center px-5 overflow-hidden">
-            <main className="w-full max-w-screen-sm flex justify-center">{children}</main>
+          <div className="relative z-[1] min-h-[100dvh] w-full px-5 py-10">
+            <main className="w-full max-w-6xl mx-auto flex flex-col gap-24">{children}</main>
           </div>
           <Toaster position="top-right" duration={3000} />
         </Providers>
