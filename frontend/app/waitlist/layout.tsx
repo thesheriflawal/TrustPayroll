@@ -34,18 +34,18 @@ export default function WaitlistLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-slate-1 text-slate-12`}>
-        <Providers defaultTheme="dark">
+    <html lang="en" suppressHydrationWarning className="dark">
+      <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-[#020817] text-white`}>
+        <Providers>
           <MeshGradientComponent
             colors={["#04203E", "#27A74A", "#0a3d5c", "#1f8a3d"]}
             speed={0.5}
             style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%", pointerEvents: "none" }}
           />
-          {/* Theme-aware overlay: softer white in light mode, darker in dark mode */}
+          {/* Dark overlay above gradient */}
           <div
             aria-hidden
-            className="fixed inset-0 bg-white/80 dark:bg-black/65 transition-colors duration-300"
+            className="fixed inset-0 bg-black/65"
             style={{ zIndex: 0, pointerEvents: "none" }}
           />
           <div className="relative z-[1] min-h-[100dvh] w-full px-5 py-6">
