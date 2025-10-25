@@ -1,0 +1,13 @@
+{
+  "name": "trustpayroll-root",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Root package.json to proxy scripts to the frontend app",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "start": "npm --prefix frontend run start",
+    "build": "npm --prefix frontend run build",
+    "lint": "npm --prefix frontend run lint",
+    "typecheck": "npm --prefix frontend run typecheck"
+  }
+}

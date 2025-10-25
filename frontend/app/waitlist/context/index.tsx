@@ -16,9 +16,9 @@ export function Providers({
   return (
     <ThemeProvider
       enableSystem
-      disableTransitionOnChange
+      disableTransitionOnChange={false}
       attribute="class"
-      defaultTheme={defaultTheme || "system"}
+      defaultTheme={defaultTheme || "dark"}
       forcedTheme={forcedTheme || undefined}
     >
       {children}
