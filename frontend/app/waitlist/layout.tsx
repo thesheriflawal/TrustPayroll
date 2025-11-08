@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
-      { url: '/icon.png' },
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/trustpayroll.png' },
+      { url: '/trustpayroll.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: '/icon.png',
+    apple: '/trustpayroll.png',
   },
 }
 
@@ -35,6 +35,12 @@ export default function WaitlistLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
+      <head>
+        {/* Explicit favicon links to ensure favicon loads in browsers */}
+        <link rel="icon" href="/trustpayroll.png" />
+        <link rel="apple-touch-icon" href="/trustpayroll.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/trustpayroll.png" />
+      </head>
       <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-[#020817] text-white`}>
         <Providers>
           <MeshGradientComponent
