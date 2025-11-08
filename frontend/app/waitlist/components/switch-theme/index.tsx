@@ -3,56 +3,36 @@
 import * as React from 'react'
 import { useTheme } from 'next-themes'
 import clsx from 'clsx'
-
-const options = ['dark', 'system', 'light'] as const
+import { Sun, Moon } from 'lucide-react'
 
 export function ThemeSwitcher({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = React.useState(false)
 
-  // Handle mounting state
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  React.useEffect(() => setMounted(true), [])
 
-  // Don't render anything until mounted to prevent hydration mismatch
   if (!mounted) {
-    return (
-      <div className={clsx(className, 'flex gap-1 opacity-0')}>
-        {options.map((option, i) => (
-          <React.Fragment key={option}>
-            <button className="text-xs">
-              <span>{option}</span>
-            </button>
-            {i < options.length - 1 && <span className="text-xs">/</span>}
-          </React.Fragment>
-        ))}
-      </div>
-    )
+    // Prevent hydration mismatch — keep layout space but hidden
+    return <div className={clsx(className, 'w-10 h-10 opacity-0')} />
   }
 
+  const prefersDark = typeof window !== 'undefined' && window.matchMedia?.('(prefers-color-scheme: dark)').matches
+  const resolvedTheme = theme === 'system' ? (prefersDark ? 'dark' : 'light') : theme
+  const isDark = resolvedTheme === 'dark'
+
   return (
-    <div className={clsx(className, 'flex gap-1')}>
-      {options.map((option, i) => (
-        <React.Fragment key={option}>
-          <button
-            className={clsx(
-              'text-xs text-zinc-600 dark:text-zinc-300 flex items-center justify-center gap-1 max-w-max cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100',
-              theme === option && '!text-zinc-900 dark:!text-zinc-100 font-medium'
-            )}
-            style={{
-              fontFeatureSettings: '"ss01"',
-              fontVariationSettings: '"wght" 500',
-            }}
-            onClick={() => setTheme(option)}
-          >
-            <span className="first-letter:uppercase">{option}</span>
-          </button>
-          {i < options.length - 1 && (
-            <span className="text-xs text-zinc-400 dark:text-zinc-500">/</span>
-          )}
-        </React.Fragment>
-      ))}
-    </div>
+    <button
+      aria-label="Toggle color theme"
+      title={isDark ? 'Switch to light' : 'Switch to dark'}
+      className={clsx(
+        className,
+        'inline-flex items-center justify-center rounded-full p-2 shadow-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+        'bg-white/80 dark:bg-zinc-900/70 text-zinc-900 dark:text-zinc-100',
+        'hover:bg-white dark:hover:bg-zinc-900/90'
+      )}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+    >
+      {isDark ? <Moon size={16} aria-hidden /> : <Sun size={16} aria-hidden />}
+    </button>
   )
 }

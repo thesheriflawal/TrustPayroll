@@ -4,25 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  /* Light theme (friendly, bright) */
+  --background: #f7f9fb; /* page background */
+  --foreground: #0f1724; /* primary text */
+  --card: rgba(255, 255, 255, 0.9); /* surface */
+  --card-foreground: #0f1724;
+  --popover: rgba(255, 255, 255, 0.96);
+  --popover-foreground: #0f1724;
+  --primary: #27A74A; /* brand green */
+  --primary-foreground: #ffffff;
+  --secondary: #eef2f4;
+  --secondary-foreground: #0f1724;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #e6f7ec;
+  --accent-foreground: #0f1724;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e6e9ef;
+  --input: #ffffff;
+  --ring: rgba(39,167,74,0.18);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);

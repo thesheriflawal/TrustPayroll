@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./components/ui/dropdown-menu"
 import { submitWaitlistEmail } from "./lib/actions"
 import { InputForm } from "./components/waitlist-form"
+import { UserPlus, Wallet, BarChart2, CheckCircle, Zap, Target, CreditCard, TrendingUp } from 'lucide-react'
 import { WaitlistWrapper } from "./components/box"
 import { ScrollToTopOnReload } from "./components/scroll-to-top"
 
@@ -231,7 +232,7 @@ export default function WaitlistPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-emerald-500/30 transition-all shadow-lg hover:shadow-emerald-500/10">
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 transition-all">
-                <span className="text-emerald-400 text-lg">👋</span>
+                <UserPlus className="text-emerald-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors">Onboarding</h3>
               <p className="text-white/60 text-sm leading-relaxed">Get started in minutes, no complex setup</p>
@@ -239,7 +240,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-blue-500/30 transition-all shadow-lg hover:shadow-blue-500/10">
               <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-all">
-                <span className="text-blue-400 text-lg">💰</span>
+                <Wallet className="text-blue-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-blue-400 transition-colors">Wallets</h3>
               <p className="text-white/60 text-sm leading-relaxed">NGN wallets for fiat funding</p>
@@ -247,7 +248,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-purple-500/30 transition-all shadow-lg hover:shadow-purple-500/10">
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all">
-                <span className="text-purple-400 text-lg">📊</span>
+                <BarChart2 className="text-purple-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Streaming</h3>
               <p className="text-white/60 text-sm leading-relaxed">Real-time salary accruals</p>
@@ -255,7 +256,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-amber-500/30 transition-all shadow-lg hover:shadow-amber-500/10">
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-all">
-                <span className="text-amber-400 text-lg">✓</span>
+                <CheckCircle className="text-amber-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-amber-400 transition-colors">Attendance</h3>
               <p className="text-white/60 text-sm leading-relaxed">Flexible tracking with CSV support</p>
@@ -263,7 +264,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-emerald-500/30 transition-all shadow-lg hover:shadow-emerald-500/10">
               <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 transition-all">
-                <span className="text-emerald-400 text-lg">⚡</span>
+                <Zap className="text-emerald-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-emerald-400 transition-colors">Withdrawals</h3>
               <p className="text-white/60 text-sm leading-relaxed">Instant payouts to bank (NGN)</p>
@@ -271,7 +272,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-blue-500/30 transition-all shadow-lg hover:shadow-blue-500/10">
               <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-all">
-                <span className="text-blue-400 text-lg">🎯</span>
+                <Target className="text-blue-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-blue-400 transition-colors">Employee Loans</h3>
               <p className="text-white/60 text-sm leading-relaxed">Salary advances for employees</p>
@@ -279,7 +280,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-purple-500/30 transition-all shadow-lg hover:shadow-purple-500/10">
               <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all">
-                <span className="text-purple-400 text-lg">💳</span>
+                <CreditCard className="text-purple-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-purple-400 transition-colors">Employer Loans</h3>
               <p className="text-white/60 text-sm leading-relaxed">Liquidity to smooth cash flow</p>
@@ -287,7 +288,7 @@ export default function WaitlistPage() {
 
             <div className="group rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-zinc-900/40 p-6 backdrop-blur-xl hover:border-amber-500/30 transition-all shadow-lg hover:shadow-amber-500/10">
               <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-all">
-                <span className="text-amber-400 text-lg">📈</span>
+                <TrendingUp className="text-amber-400" size={20} />
               </div>
               <h3 className="font-semibold mb-2 group-hover:text-amber-400 transition-colors">Observability</h3>
               <p className="text-white/60 text-sm leading-relaxed">Real-time liability metrics</p>

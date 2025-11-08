@@ -34,24 +34,24 @@ export default function WaitlistLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Explicit favicon links to ensure favicon loads in browsers */}
         <link rel="icon" href="/trustpayroll.png" />
         <link rel="apple-touch-icon" href="/trustpayroll.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/trustpayroll.png" />
       </head>
-      <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-[#020817] text-white`}>
+      <body className={`${montserrat.variable} font-sans antialiased max-w-screen min-h-svh bg-background text-foreground`}>
         <Providers>
           <MeshGradientComponent
             colors={["#04203E", "#27A74A", "#0a3d5c", "#1f8a3d"]}
             speed={0.5}
             style={{ position: "fixed", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%", pointerEvents: "none" }}
           />
-          {/* Dark overlay above gradient */}
+          {/* Overlay above gradient: light uses a soft white wash, dark uses stronger black wash */}
           <div
             aria-hidden
-            className="fixed inset-0 bg-black/65"
+            className="fixed inset-0 bg-white/30 dark:bg-black/65"
             style={{ zIndex: 0, pointerEvents: "none" }}
           />
           <div className="relative z-[1] min-h-[100dvh] w-full px-5 py-6">

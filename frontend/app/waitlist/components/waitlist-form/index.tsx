@@ -90,7 +90,8 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           {...props}
           value={value}
           className={clsx(
-            "flex-1 text-sm pl-4 pr-28 py-2 h-11 bg-gray-11/5 cursor-text rounded-full text-gray-12 placeholder:text-gray-9 border border-gray-11/10 focus:outline-none",
+            "flex-1 text-sm pl-4 pr-28 py-2 h-11 cursor-text rounded-full placeholder:text-[color:var(--muted-foreground)] focus:outline-none",
+            "bg-[color:var(--card)] text-[color:var(--card-foreground)] border border-[color:var(--border)]"
           )}
           disabled={inputDisabled}
           onChange={(e) => setValue(e.target.value)}
@@ -105,18 +106,12 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
           className={clsx(
             "absolute h-8 px-3.5 text-sm top-1/2 transform -translate-y-1/2 right-1.5 rounded-full font-medium flex gap-1 items-center",
             "cursor-pointer disabled:cursor-not-allowed transition-colors",
-            // Light mode: black background, white text
-            "bg-black text-white",
-            // Dark mode: white background, black text
-            "dark:bg-white dark:text-black",
-            // Hover accents
-            "hover:bg-[#27A74A] hover:text-white",
-            "dark:hover:bg-[#27A74A] dark:hover:text-white",
+            "bg-[color:var(--primary)] text-[color:var(--primary-foreground)] hover:opacity-95",
             {
               // Loading subtle state
               "opacity-80": state === "loading",
             },
-            inputDisabled && "cursor-not-allowed bg",
+            inputDisabled && "cursor-not-allowed"
           )}
         >
           {state === "loading" ? (
@@ -132,8 +127,8 @@ export function InputForm({ formAction, buttonCopy, ...props }: InputForm) {
         </button>
       </div>
       <div className="w-full h-2" />
-      {error && <p className="absolute text-xs text-[#ff0000] top-full -translate-y-1/2 px-2">{error}</p>}
-      {state === 'success' && <p className="absolute text-xs text-green-600 top-full -translate-y-1/2 px-2">Waitlist joined successfully</p>}
+  {error && <p className="absolute text-xs text-[color:var(--destructive)] top-full -translate-y-1/2 px-2">{error}</p>}
+  {state === 'success' && <p className="absolute text-xs text-[color:var(--primary)] top-full -translate-y-1/2 px-2">Waitlist joined successfully</p>}
     </form>
   )
 }
