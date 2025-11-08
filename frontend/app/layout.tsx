@@ -1,8 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import { ThemeToggle } from "../components/ui/theme-toggle";
 
 export const metadata: Metadata = {
   title: "TrustPayroll",
@@ -15,12 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // Force dark mode site-wide by adding the `dark` class on the <html> element.
+    <html lang="en" className="dark">
       <body>
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
-          {children}
-          <ThemeToggle />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
